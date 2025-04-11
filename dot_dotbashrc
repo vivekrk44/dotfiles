@@ -111,3 +111,4 @@ if [ ! -z "$INTERACTIVE_SHELL" ]; then # when loaded interactively, run tmux
   fi
 fi
 # [[ $TERM != "screen" ]] && exec tmux
+# testing chezmoi
