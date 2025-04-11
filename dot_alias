@@ -1,0 +1,98 @@
+alias tii="pushd . ; cd /home/vivek/ws/tii_docker_dev/scripts ; ./run_sim_docker.sh ; popd"
+alias docker_propeller="pushd . ; cd /home/vivek/ws/tii_docker_dev/scripts ; ./run_sim_docker.sh propeller ; popd"
+alias nvidia="ssh nvidia@nvidia -X"
+alias tii="ssh tii@nvidia -X"
+alias tx2="ssh nvidia@tx2 -X"
+alias pc='f(){ (nohup charm &); exit;  unset -f f; }; f'
+alias re_sound='pulseaudio -k && sudo alsa force-reload'
+alias tx23_master="export ROS_MASTER_URI=http://TX2-3:11311"
+alias tx21_master="export ROS_MASTER_URI=http://TX2-1:11311"
+alias dq146_master="export ROS_MASTER_URI=http://openzeka:11311"
+alias master_dq162="export ROS_MASTER_URI=http://dq162:11311"
+alias master_hs2="export ROS_MASTER_URI=http://halcon-sirmione-2:11311"
+alias master_sm1="export ROS_MASTER_URI=http://halcon-sm1-1:11311"
+alias master_dq174="export ROS_MASTER_URI=http://dq100-nx:11311"
+alias master_voxl1="export ROS_MASTER_URI=http://voxl1:11311"
+alias master_voxl2="export ROS_MASTER_URI=http://voxl2:11311"
+alias master_voxl3="export ROS_MASTER_URI=http://voxl3:11311"
+alias master_voxl2_5="export ROS_MASTER_URI=http://voxl2_5:11311"
+alias master_voxl2_2="export ROS_MASTER_URI=http://voxl2_2:11311"
+alias master_voxl5="export ROS_MASTER_URI=http://voxl5:11311"
+alias master_race3="export ROS_MASTER_URI=http://race3:11311"
+alias master_race4="export ROS_MASTER_URI=http://race4:11311"
+alias master_race7="export ROS_MASTER_URI=http://race7:11311"
+
+alias master_rf_seeker="ROS_MASTER_URI=http://longrange-testingnx:11311"
+alias remove_nvidia='ssh-keygen -f "/home/vivek/.ssh/known_hosts" -R "nvidia" && ssh-keygen -f "/home/vivek/.ssh/known_hosts" -R "192.168.55.1"'
+alias remove_ip='rmip(){ ssh-keygen -f "/home/vivek/.ssh/known_hosts" -R $1; }; rmip'
+alias mapviz_init='sudo docker run -p 8080:8080 -d -t -v ~/mapproxy:/mapproxy danielsnider/mapproxy'
+alias tx21="ssh nvidia@TX2-1 -X"
+alias tx22="ssh nvidia@TX2-2 -X"
+alias tx23="ssh nvidia@TX2-3 -X"
+alias tx24="ssh nvidia@TX2-4 -X"
+alias dq162="ssh openzeka@dq162" #"/home/vivek/test.sh dq162 openzeka"   #"ssh openzeka@dq162 -X"
+alias dq163="ssh openzeka@dq163"
+alias dq174="ssh openzeka@dq174-nx"
+alias hs1="ssh openzeka@halcon-sirmione1"
+alias hs2="ssh openzeka@halcon-sirmione-2"
+alias sm1="ssh openzeka@halcon-sm1-1"
+alias qxs2="ssh tii@qxs2"
+alias frankie="ssh tii@qxs9"
+alias openzeka="ssh openzeka@openzeka -X"
+alias onvidia="ssh openzeka@nvidia -X"
+alias server="ssh -i /home/vivek/Downloads/vivek-host-pop-os.pem ubuntu@ec2-18-221-80-138.us-east-2.compute.amazonaws.com" #ec2-3-138-190-212.us-east-2.compute.amazonaws.com"
+alias nsdk="export LSB_OS_RELEASE=/usr/lib/os-release-bionic && sdkmanager"
+alias stsf='tmux_multiple 5 "self_ssh" "ssh openzeka@halcon-sirmione-2"'
+alias tx2003='ssh openzeka@TX2-003'
+alias tx2-4='ssh longrange@TX2-004-JP45'
+alias cb="pushd . && cd /home/vivek/catkin_ws/ && catkin build $! && popd "
+alias mlab='/usr/local/MATLAB/R2022a/bin/matlab & disown'
+alias isaac_sim_docker='sudo docker run --gpus all -e "ACCEPT_EULA=Y" --rm --network=host nvcr.io/nvidia/isaac-sim:2021.1.1'
+
+alias voxl1='ssh root@voxl1'
+alias voxl2='ssh root@voxl2'
+alias voxl3='ssh root@voxl3'
+alias voxl4='ssh root@voxl4'
+alias voxl5='ssh root@voxl5'
+alias voxl6='ssh root@voxl6'
+alias voxl2-1='ssh root@voxlv2-1'
+alias voxl2_2='ssh root@voxl2_2'
+alias voxl2_5='ssh root@voxl2_5'
+alias race3='ssh race3@race3-desktop'
+alias race4='ssh race4@race4'
+alias race7='ssh race7@race7'
+alias ros_flightmare='source /home/vivek/ws/ros_ws/flightmware_ws/devel/setup.bash'
+alias ros_arpl='source /home/vivek/ws/ros_ws/arpl_ws/devel/setup.bash'
+alias ros_arrc='source /home/vivek/ws/ros_ws/arrc_ws/devel/setup.bash'
+alias docker_kalibr='docker run -it -e "DISPLAY" -e "QT_X11_NO_MITSHM=1" -v "/tmp/.X11-unix:/tmp/.X11-unix:rw" -v "/home/vivek/foo:/foo" stereolabs/kalibr:kinetic'
+alias docker_swarm='cd /home/vivek/git/swarm_simulation/Docker && . run_docker.sh'
+alias p2='python2'
+alias qgc='/home/vivek/Downloads/QGroundControl.AppImage'
+alias git_token='echo "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"'
+alias git_token_ale='echo "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"'
+alias zf='cd /home/vivek/ws/docker/zf_docker; ./run_sim_docker.sh zf'
+alias dev='cd /home/vivek/ws/docker/zf_docker; ./run_sim_docker.sh'
+
+alias lvim='vim -u /home/vivek/vivek_lite.vimrc'
+
+eval "$(thefuck --alias)"
+# Check if bash or fish
+function ssh_remove() { ssh-keygen -f "/home/vivek/.ssh/known_hosts" -R $1; }
+alias crapbasket='fuck'
+alias fuckyouGKY='fuck'
+alias mine_all_mine='sudo chown -R vivek:vivek .'
+
+alias tvxl3='terminator -l voxl3'
+alias tvxlcov='terminator -l coverage'
+alias ros_source='source devel/setup.bash'
+alias ros_ws='cd /home/vivek/ws/ros_ws/'
+
+alias screen_brightness='xrandr --output eDP-1 --brightness'
+alias fix_key='keyctl link @u @s'
+
+# alias tmux="tmux -CC"
+
+# create alisases
+alias sb="source ~/.bashrc"
+
+# alias cd=z
