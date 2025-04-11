@@ -68,7 +68,7 @@ alias docker_kalibr='docker run -it -e "DISPLAY" -e "QT_X11_NO_MITSHM=1" -v "/tm
 alias docker_swarm='cd /home/vivek/git/swarm_simulation/Docker && . run_docker.sh'
 alias p2='python2'
 alias qgc='/home/vivek/Downloads/QGroundControl.AppImage'
-alias git_token='echo "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"'
+alias git_token='echo "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"'
 alias git_token_ale='echo "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"'
 alias zf='cd /home/vivek/ws/docker/zf_docker; ./run_sim_docker.sh zf'
 alias dev='cd /home/vivek/ws/docker/zf_docker; ./run_sim_docker.sh'
