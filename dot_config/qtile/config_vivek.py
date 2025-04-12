@@ -55,6 +55,11 @@ rofi_btooth      = "/home/vivek/.config/rofi/applets/bin/bluetooth"
 rofi_windows     = "/home/vivek/.config/rofi/types/type-5/window.sh"
 rofi_screenshots = "/home/vivek/.config/rofi/applets/bin/screenshot.sh"
 
+qtile_asroot = "/home/vivek/.config/qtile/scripts/qtile_asroot"
+
+power_cpu_scaling   = "/home/vivek/.config/qtile/scripts/power/cpu_power_scaling.sh"
+sound_output_switch = "/home/vivek/.config/qtile/scripts/sound/output_switcher.sh"
+
 @hook.subscribe.startup_once
 def autostart():
     subprocess.call([os.path.expanduser('~/.config/qtile/autostart.sh')])
@@ -156,8 +161,13 @@ keys = [
     Key([], 'Print', lazy.spawn(rofi_screenshots)),
     Key(
         [mod, "shift"], "a", 
-        lazy.spawn(os.path.expanduser("~/.config/qtile/scripts/sound/output_switcher.sh")),
+        lazy.spawn(os.path.expanduser(sound_output_switch)),
         desc="Cycle audio output devices"
+    ),
+    Key(
+        [mod, "shift"], "p", 
+        lazy.spawn(os.path.expanduser(qtile_asroot) + " " + os.path.expanduser(power_cpu_scaling)),
+        desc="Cycle CPU frequency profiles"
     ),
 ]
 
