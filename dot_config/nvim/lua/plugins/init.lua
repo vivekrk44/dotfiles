@@ -124,7 +124,8 @@ return {
   	opts = {
   		ensure_installed = {
   			"vim", "lua", "vimdoc",
-       "html", "css", "cpp", "python"
+        "html", "css", "cpp", "python",
+        "dockerfile", "bash"
   		},
   	},
   },
