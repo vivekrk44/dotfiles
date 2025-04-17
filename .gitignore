@@ -1,2 +1,4 @@
 dot_config/qtile/__pycache__/
 dot_config/qtile/cpu_profile
+dot_config/nvim/profile.log
+dot_config/nvim/lazy-lock.json
