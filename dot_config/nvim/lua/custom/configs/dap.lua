@@ -1,22 +1,5 @@
 local dap = require("dap")
 local dapui = require("dapui")
--- local ui_config = {
---   icons = { expanded = "🞃", collapsed = "🞂", current_frame = "→" },
---   controls = {
---     icons = {
---       pause = "⏸",
---       play = "⯈",
---       step_into = "↴",
---       step_over = "↷",
---       step_out = "↑",
---       step_back = "↶",
---       run_last = "🗘",
---       terminate = "🕱",
---       disconnect = "⏻"
---     }
---   }
--- }
--- dapui.setup(ui_config)
 dapui.setup()
 dap.listeners.after.event_initialized["dapui_config"] = function()
   print("[dapui] Start event received")
