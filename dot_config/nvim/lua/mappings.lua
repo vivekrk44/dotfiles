@@ -29,6 +29,8 @@ map("n", "<leader>tdS", "<cmd>Telescope lsp_workspace_symbols<CR>", { desc = "Te
 map("n", "<leader>tgd", "<cmd>Telescope lsp_definitions<CR>",       { desc = "Telescope go to definition using LSP"})
 map("n", "<leader>tca", "<cmd>lua vim.lsp.buf.code_action()<CR>",   { desc = "Telescope suggested code action using LSP"})
 
+map("n", "<leader>:",   function() require("telescope.builtin").commands() end, { desc = "Telescope command view" })
+
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
