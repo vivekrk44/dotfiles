@@ -15,12 +15,13 @@ map("n", "<leader>ca", "<cmd>CodeCompanionActions<CR>", { desc = "Code Completio
 
 -- Set up keybindings for buffer navigation
 local nav = require("custom.mappings.navigation")
-vim.keymap.set('n', '<C-Left>',  function() nav.navigate_buffer("left") end, {silent = true, desc = "Navigate to left buffer"})
-vim.keymap.set('n', '<C-Right>', function() nav.navigate_buffer("right") end, {silent = true, desc = "Navigate to right buffer"})
-vim.keymap.set('n', '<C-Up>',    function() nav.navigate_buffer("up") end, {silent = true, desc = "Navigate to buffer above"})
-vim.keymap.set('n', '<C-Down>',  function() nav.navigate_buffer("down") end, {silent = true, desc = "Navigate to buffer below"})
+map('n', '<C-Left>',  function() nav.navigate_buffer("left") end, {silent = true, desc = "Navigate to left buffer"})
+map('n', '<C-Right>', function() nav.navigate_buffer("right") end, {silent = true, desc = "Navigate to right buffer"})
+map('n', '<C-Up>',    function() nav.navigate_buffer("up") end, {silent = true, desc = "Navigate to buffer above"})
+map('n', '<C-Down>',  function() nav.navigate_buffer("down") end, {silent = true, desc = "Navigate to buffer below"})
 
- 
+-- Setup telescope keybindings
+
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
