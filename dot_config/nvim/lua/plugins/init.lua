@@ -1,6 +1,15 @@
 return {
 
   {
+    "nvim-telescope/telescope-ui-select.nvim",
+    event = "VeryLazy",
+    dependencies = { "nvim-telescope/telescope.nvim" },
+    config = function ()
+      require("custom.configs.telescope")
+    end
+  },
+
+  {
     "olimorris/codecompanion.nvim",
     event = "VeryLazy",
     dependencies = {

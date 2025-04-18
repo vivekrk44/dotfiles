@@ -21,7 +21,13 @@ map('n', '<C-Up>',    function() nav.navigate_buffer("up") end, {silent = true, 
 map('n', '<C-Down>',  function() nav.navigate_buffer("down") end, {silent = true, desc = "Navigate to buffer below"})
 
 -- Setup telescope keybindings
-
+map("n", "<leader>tr",  "<cmd>Telescope lsp_references<CR>",        { desc = "Telescope find all references using LSP"})
+map("n", "<leader>ti",  "<cmd>Telescope lsp_implementations<CR>",   { desc = "Telescope find all implementations of interfaces using LSP"})
+map("n", "<leader>tdg", "<cmd>Telescope diagnostics<CR>",           { desc = "Telescope code disagnostics using LSP"})
+map("n", "<leader>tds", "<cmd>Telescope lsp_document_symbols<CR>",  { desc = "Telescope list all symbols in current file using LSP"})
+map("n", "<leader>tdS", "<cmd>Telescope lsp_workspace_symbols<CR>", { desc = "Telescope find symbols across your entire project using LSP"})
+map("n", "<leader>tgd", "<cmd>Telescope lsp_definitions<CR>",       { desc = "Telescope go to definition using LSP"})
+map("n", "<leader>tca", "<cmd>lua vim.lsp.buf.code_action()<CR>",   { desc = "Telescope suggested code action using LSP"})
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
