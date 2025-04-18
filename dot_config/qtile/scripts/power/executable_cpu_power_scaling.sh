@@ -3,7 +3,7 @@
 # Define the three desired max frequency profiles (in kHz)
 DESIRED_MAX_FREQ=5200000    # 5200MHz
 DESIRED_MED_FREQ=3500000    # 3500MHz
-DESIRED_LOW_FREQ=2000000    # 2000MHz
+DESIRED_LOW_FREQ=1000000    # 1000MHz
 
 # Set home path
 HOME="/home/vivek"
