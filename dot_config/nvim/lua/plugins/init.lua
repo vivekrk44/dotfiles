@@ -1,4 +1,23 @@
 return {
+  {
+    "hrsh7th/nvim-cmp",
+    event = "InsertEnter",
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp",    -- LSP completion source
+      "hrsh7th/cmp-buffer",      -- Buffer completion source
+      "hrsh7th/cmp-path",        -- Path completion source
+      "hrsh7th/cmp-cmdline",     -- Command line completion
+      "saadparwaiz1/cmp_luasnip", -- Snippet completion source
+      {
+        "L3MON4D3/LuaSnip",      -- Snippet engine
+        dependencies = { "rafamadriz/friendly-snippets" }, -- Optional: add pre-made snippets
+      },
+      "onsails/lspkind.nvim",    -- VS Code-like pictograms
+    },
+    config = function ()
+      require("custom.configs.nvim-cmp").init()
+    end
+  },
 
   {
     'rmagatti/auto-session',
