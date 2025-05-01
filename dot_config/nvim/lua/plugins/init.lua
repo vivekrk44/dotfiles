@@ -1,5 +1,9 @@
 return {
   {
+    "lambdalisue/vim-suda",
+    event = "VeryLazy"
+  },
+  {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
     event = "InsertEnter",
