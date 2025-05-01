@@ -34,4 +34,7 @@ map("n", "<leader>:",   function() require("telescope.builtin").commands() end, 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
+-- Set relative line number
+map("n", "<leader>rnl", "<cmd>set rnu!<CR>", { desc = "toggle relative number" })
+
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
