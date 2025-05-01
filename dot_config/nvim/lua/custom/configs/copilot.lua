@@ -54,8 +54,8 @@ function M.setup()
       debounce = 75,  -- Debounce time in ms
       keymap = {
         accept = "<leader><Tab>",
-        accept_word = false,
-        accept_line = false,
+        accept_word = "<leader><Tab>w",
+        accept_line = "<leader><Tab>a",
         next = "<M-]>",
         prev = "<M-[>",
         dismiss = "<C-]>",
