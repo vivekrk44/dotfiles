@@ -31,6 +31,10 @@ map("n", "<leader>tca", "<cmd>lua vim.lsp.buf.code_action()<CR>",   { desc = "Te
 
 map("n", "<leader>:",   function() require("telescope.builtin").commands() end, { desc = "Telescope command view" })
 
+-- Tab navigation
+map("n", "<leader>{" , "<cmd>tabprevious<CR>", { desc = "Previous tab" })
+map("n", "<leader>}" , "<cmd>tabnext<CR>", { desc = "Next tab" })
+
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
