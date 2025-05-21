@@ -44,4 +44,7 @@ map("n", "<leader>rnl", "<cmd>set rnu!<CR>", { desc = "toggle relative number" }
 -- Use F8 to toggle symbols outline
 map("n", "<F2>", "<cmd>SymbolsOutline<CR>", { desc = "Toggle symbols outline" })
 
+-- Use F3 to switch source/header
+map("n", "<F3>", "<cmd>ClangdSwitchSourceHeader<CR>", { desc = "Source/Header Toggle" })
+
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
