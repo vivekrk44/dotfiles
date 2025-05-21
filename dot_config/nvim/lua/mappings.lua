@@ -42,6 +42,7 @@ map("i", "jk", "<ESC>")
 map("n", "<leader>rnl", "<cmd>set rnu!<CR>", { desc = "toggle relative number" })
 
 -- Use F8 to toggle symbols outline
+-- Use F2 to toggle symbols outline
 map("n", "<F2>", "<cmd>SymbolsOutline<CR>", { desc = "Toggle symbols outline" })
 
 -- Use F3 to switch source/header
