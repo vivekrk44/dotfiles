@@ -1,5 +1,12 @@
 return {
   {
+    "simrat39/symbols-outline.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("custom.configs.symbols-outline")
+    end,
+  },
+  {
     "lambdalisue/vim-suda",
     event = "VeryLazy"
   },
