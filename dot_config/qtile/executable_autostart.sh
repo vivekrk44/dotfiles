@@ -33,3 +33,5 @@ wal -R &
 
 # Start battery monitor
 /home/vivek/.config/qtile/scripts/hardware/battery_warning.sh & disown
+# Start monitor detection scripts 
+/home/vivek/.config/qtile/scripts/screen/auto_monitor_config.py & disown
