@@ -38,3 +38,4 @@ vim.opt.clipboard = "unnamedplus"
 vim.schedule(function()
   require "mappings"
 end)
+require("custom.configs.colcon_build")
