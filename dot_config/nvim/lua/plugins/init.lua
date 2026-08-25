@@ -1,5 +1,12 @@
 return {
   {
+    "xolox/vim-notes",
+    event = "VeryLazy",
+    dependencies = {
+      "xolox/vim-misc",
+    }
+  },
+  {
     "simrat39/symbols-outline.nvim",
     event = "VeryLazy",
     config = function()

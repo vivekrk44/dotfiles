@@ -110,5 +110,8 @@ if [ ! -z "$INTERACTIVE_SHELL" ]; then # when loaded interactively, run tmux
     fi
   fi
 fi
+
+eval "$(starship init bash)"
+eval "$(zoxide init bash)"
 # [[ $TERM != "screen" ]] && exec tmux
 # testing chezmoi

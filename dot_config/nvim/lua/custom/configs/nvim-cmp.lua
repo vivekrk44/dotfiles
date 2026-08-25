@@ -97,24 +97,26 @@ end
 function M.setup_cpp_lsp()
   local capabilities = M.setup_lsp_capabilities()
   
-  require("lspconfig").clangd.setup {
-    capabilities = capabilities,
-    cmd = {
-      "clangd",
-      "--background-index",
-      "--suggest-missing-includes",
-      "--clang-tidy",
-      "--header-insertion=iwyu",
-      "--completion-style=detailed",
-      "--function-arg-placeholders",
-      "--fallback-style=llvm",
-    },
-    init_options = {
-      usePlaceholders = true,
-      completeUnimported = true,
-      clangdFileStatus = true,
-    },
-  }
+  vim.lsp.config('clangd', {
+  capabilities = capabilities,
+  cmd = {
+    "clangd",
+    "--background-index",
+    "--suggest-missing-includes",
+    "--clang-tidy",
+    "--header-insertion=iwyu",
+    "--completion-style=detailed",
+    "--function-arg-placeholders",
+    "--fallback-style=llvm",
+  },
+  init_options = {
+    usePlaceholders = true,
+    completeUnimported = true,
+    clangdFileStatus = true,
+  },
+})
+
+vim.lsp.enable('clangd')
 end
 
 -- Setup C++ custom highlights
@@ -158,7 +160,7 @@ end
 
 -- Setup Treesitter for better syntax highlighting
 function M.setup_treesitter()
-  require("nvim-treesitter.configs").setup({
+  require("nvim-treesitter.config").setup({
     ensure_installed = { 
       "c", "cpp", "lua", "vim", "vimdoc", "query",
       -- Add other languages you commonly use
